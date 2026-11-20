@@ -189,7 +189,7 @@ def accept(d, u):
 def pickup(d, u):
     p = mp(d, u, "pick"); req(d, "weight", "fee", "cod")
     if d["cod"] not in ("ปลายทาง", "จ่ายที่จุดรับ", "ไม่มีเก็บเงินปลายทาง"): raise X("ช่องทางเก็บเงินไม่ถูกต้อง", "cod")
-    p.update(weight=d["weight"], fee=d["fee"], cod=d["cod"]); sv(p, u, "พนักงานรับพัสดุแล้ว (น้ำหนัก %s กก. ค่าขนส่ง %s เงินในเกม, %s)" % (d["weight"], d["fee"], d["cod"]), "got"); return {"ok": 1}
+    p.update(weight=d["weight"], fee=d["fee"], cod=d["cod"]); sv(p, u, "พนักงานรับพัสดุแล้ว (น้ำหนัก %s กก. ค่าขนส่ง , %s)" % (d["weight"], d["fee"], d["cod"]), "got"); return {"ok": 1}
 @h
 def upd(d, u):
     p = mp(d, u, "pick", "got", "deliv"); req(d, "text"); sv(p, u, d["text"].strip(), None, locs(d["text"])); return {"ok": 1}
