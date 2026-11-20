@@ -6,8 +6,8 @@ from flask import Flask, request, session, jsonify, Response
 from werkzeug.security import generate_password_hash as gh, check_password_hash as ch
 
 # ---------- ตั้งค่า (แก้ได้ตรงนี้) ----------
-ADMIN_USER = "1234"
-ADMIN_PASSWORD = "ມຫາ1234"      # <<< รหัสแอดมินเริ่มต้น แก้ตรงนี้ (เปลี่ยนในแอปได้ภายหลัง)
+ADMIN_USER = "1428"
+ADMIN_PASSWORD = "iceມຫາ175"      # <<< รหัสแอดมินเริ่มต้น แก้ตรงนี้ (เปลี่ยนในแอปได้ภายหลัง)
 PORT = 5000
 DB, BK = "data/app.db", "data/backup"
 MAX_WH = 6                        # จำกัดคลังสูงสุด 6
